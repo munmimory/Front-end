@@ -1,0 +1,170 @@
+/* Căn chỉnh bảng và các phần tử */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+}
+
+.table-head{
+  background-color: #fff;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f9fafb;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+td {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Checkbox ở cột "Name" */
+td input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Các nút Edit và Delete (Biểu tượng) */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #3498db; /* Đổi màu khi hover */
+}
+
+button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+button i {
+  font-size: 18px; /* Điều chỉnh kích thước icon */
+}
+
+button:disabled i {
+  color: #ccc; /* Màu icon khi vô hiệu hóa */
+}
+
+/* Email */
+.user-email a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Dấu tích ở cột "Status" */
+.status {
+  display: inline-block;
+  align-items: right;
+  padding: 5px 15px;
+  border: 1px solid #333;
+  border-radius: 20px;
+}
+.b-status {
+}
+.status span {
+}
+
+/* Phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.pagination-num {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-num-left {
+  padding: 10px 30px;
+}
+
+.pagination-num-right {
+  display: flex;
+  gap: 10px;
+  padding: 10px 30px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.pagination button:disabled {
+  background-color: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Màu nền của vòng tròn */
+  border-top: 4px solid #3498db; /* Màu của vòng tròn quay */
+  border-radius: 50%; /* Làm cho vòng tròn tròn */
+  width: 50px; /* Đặt kích thước */
+  height: 50px;
+  animation: spin 2s linear infinite; /* Quay vòng tròn */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* dark mode */
+/* Mặc định - Chế độ sáng */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Chế độ tối */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+
+body.dark-mode button {
+  background-color: #333;
+  color: #fff;
+}
